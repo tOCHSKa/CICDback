@@ -41,35 +41,6 @@ const userRoutesFavoris = require('./routes/favoris.js')
 const userRoutesUsers = require('./routes/users')
 app.use('/api/users', userRoutesUsers, userRoutesFavoris, userRoutesHistorique);
 
-const retrievegetMovieIdByTitle = require('./apiRequest/retrievegetMovieIdByTitle.js');
-app.use('/api/search/film', retrievegetMovieIdByTitle);
-
-const retrievegetSeriesIdByTitle = require('./apiRequest/retrievegetSeriesIdByTitle.js');
-app.use('/api/search/serie', retrievegetSeriesIdByTitle);
-
-const listGetGenre = require('./apiRequest/listGetGenre.js');
-app.use('/api/search/genre', listGetGenre);
-
-const listgetSeriesOrderByRatings = require('./apiRequest/listgetSeriesOrderByRatings.js')
-app.use('/api/search/seriebyrating', listgetSeriesOrderByRatings);
-
-const listgetFilmsOrderByRatings = require('./apiRequest/listgetFilmsOrderByRatings.js')
-app.use('/api/search/filmbyrating', listgetFilmsOrderByRatings);
-
-const listFilmByActor = require('./apiRequest/listFilmByActor.js')
-app.use('/api/search/filmbyactorname', listFilmByActor)
-
-const listSerieByActor = require('./apiRequest/listSerieByActor.js')
-app.use('/api/search/seriebyactorname', listSerieByActor)
-
-const getActorInfo = require('./apiRequest/getActorInfo.js')
-app.use('/api/search/actorDetail', getActorInfo)
-
-const movieCast = require('./apiRequest/movie.js')
-app.use('/api/search/castByMovie', movieCast)
-
-const actorCast = require('./apiRequest/getActorImage.js')
-app.use('/api/search/castInfoByMovie', actorCast)
 
 const port = process.env.PORT || 3000;
 
