@@ -12,19 +12,12 @@ const twoFA = {}
 
 
 router.get('/test', async (req, res) => {
-    try {
-        const db = await connectToDb()
-        if (!db) {
-            return res.status(500).json({ message: "Erreur à la base de données" })
-        }
 
         let a = 10;
-
         res.status(200).json({ message: "a"});
-    } catch (err) {
         console.error('Erreur');
         res.status(500).json({message : "Erreur", error: err})
-    }
+
 
 });
 
